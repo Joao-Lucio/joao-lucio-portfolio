@@ -28,7 +28,7 @@ export function useLocale() {
     localStorage.setItem(STORAGE_KEY, value)
   }
 
-  function t(section: 'nav' | 'ui', key: string): string {
+  function t(section: 'nav' | 'ui' | 'app', key: string): string {
     return translations[locale.value]?.[section]?.[key] ?? key
   }
 

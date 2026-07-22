@@ -10,6 +10,7 @@ export interface NavItem {
 export interface TranslationMap {
   nav: Record<string, string>
   ui: Record<string, string>
+  app: Record<string, string>
 }
 
 export type Translations = Record<Locale, TranslationMap>

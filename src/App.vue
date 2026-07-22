@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import AppHeader from "@components/AppHeader/index.vue";
-import { useTheme } from "@/composables";
+import { useLocale, useTheme } from "@/composables";
 import darkScrollArrow from "@/assets/dark/scroll-arrow.svg";
 import darkBullet from "@/assets/dark/bullet.svg";
 import darkExternalLink from "@/assets/dark/external-link.svg";
@@ -20,6 +20,7 @@ import lightEmail from "@/assets/light/email.svg";
 import lightPhone from "@/assets/light/phone.svg";
 
 const { isDark } = useTheme();
+const { t } = useLocale();
 
 const heroTechnologies = [
   "React",
@@ -30,53 +31,59 @@ const heroTechnologies = [
   "Swift",
 ];
 
-const competencies = [
-  { title: "Frontend", description: "React • Next.js • TypeScript" },
-  { title: "Mobile", description: "React Native • Kotlin • Swift" },
-  { title: "Integrations", description: "REST API • Firebase • POS" },
-  { title: "Tools", description: "Git • GitHub Actions • Figma" },
-];
+const competencies = computed(() => [
+  {
+    title: t("app", "competencyFrontendTitle"),
+    description: t("app", "competencyFrontendDescription"),
+  },
+  {
+    title: t("app", "competencyMobileTitle"),
+    description: t("app", "competencyMobileDescription"),
+  },
+  {
+    title: t("app", "competencyIntegrationsTitle"),
+    description: t("app", "competencyIntegrationsDescription"),
+  },
+  {
+    title: t("app", "competencyToolsTitle"),
+    description: t("app", "competencyToolsDescription"),
+  },
+]);
 
-const roles = [
+const roles = computed(() => [
   {
-    period: "2025 — Atual",
-    title: "Tech Lead",
-    company: "Orange Labs Tecnologia",
+    period: t("app", "role1Period"),
+    title: t("app", "role1Title"),
+    company: t("app", "role1Company"),
     current: true,
-    summary: "Liderança técnica focada em soluções de delivery e pagamentos.",
-    highlights: [
-      "Apoio técnico contínuo ao time de desenvolvimento e planejamento técnico de features.",
-      "Revisão rigorosa de código (Code Review) para assegurar qualidade e escalabilidade.",
-    ],
+    summary: t("app", "role1Summary"),
+    highlights: [t("app", "role1Highlight1"), t("app", "role1Highlight2")],
   },
   {
-    period: "2023 — 2025",
-    title: "Front-end / Mobile Dev",
-    company: "Orange Labs Tecnologia",
+    period: t("app", "role2Period"),
+    title: t("app", "role2Title"),
+    company: t("app", "role2Company"),
     current: false,
-    highlights: [
-      "Desenvolvimento com React e React Native utilizando componentes reutilizáveis.",
-      "Consumo de APIs, integração com dispositivos POS e publicação em App Store/Play Store.",
-    ],
+    summary: "",
+    highlights: [t("app", "role2Highlight1"), t("app", "role2Highlight2")],
   },
   {
-    period: "2023 — 2023",
-    title: "QA Analyst",
-    company: "Orange Labs Tecnologia",
+    period: t("app", "role3Period"),
+    title: t("app", "role3Title"),
+    company: t("app", "role3Company"),
     current: false,
-    summary: "Testes funcionais, rastreamento de bugs e validação de releases.",
+    summary: t("app", "role3Summary"),
     highlights: [],
   },
   {
-    period: "2022 — 2023",
-    title: "Agente Externo",
-    company: "Orange Labs Tecnologia",
+    period: t("app", "role4Period"),
+    title: t("app", "role4Title"),
+    company: t("app", "role4Company"),
     current: false,
-    summary:
-      "Atendimento ao cliente, suporte operacional e coleta de feedbacks estruturados.",
+    summary: t("app", "role4Summary"),
     highlights: [],
   },
-];
+]);
 
 const themeAssets = computed(() =>
   isDark.value
@@ -113,11 +120,14 @@ const themeAssets = computed(() =>
         <div class="hero__content">
           <div class="availability">
             <span class="availability__dot" />
-            <span>Boa Vista – RR | Open for Opportunities</span>
+            <span>{{ t("app", "availability") }}</span>
           </div>
           <h1 id="hero-title">João Lúcio Almeida da Silva</h1>
-          <p class="hero__role">Front-end &amp; Mobile Engineer</p>
-          <ul class="hero__technologies" aria-label="Principais tecnologias">
+          <p class="hero__role">{{ t("app", "heroRole") }}</p>
+          <ul
+            class="hero__technologies"
+            :aria-label="t('app', 'heroTechnologiesLabel')"
+          >
             <li v-for="technology in heroTechnologies" :key="technology">
               {{ technology }}
             </li>
@@ -125,7 +135,7 @@ const themeAssets = computed(() =>
           <a
             class="hero__scroll"
             href="#about"
-            aria-label="Ir para a seção sobre mim"
+            :aria-label="t('app', 'heroScrollLabel')"
           >
             <img :src="themeAssets.scrollArrow" alt="" />
           </a>
@@ -138,38 +148,31 @@ const themeAssets = computed(() =>
         aria-labelledby="about-title"
       >
         <article class="about__copy surface-card">
-          <h2 id="about-title" class="eyebrow">01. Sobre mim</h2>
-          <p>
-            Desenvolvedor Front-end e Mobile com vasta experiência no
-            desenvolvimento e manutenção de aplicações web e mobile de alta
-            escala utilizando React, React Native, TypeScript e Next.js. Com
-            foco em arquitetura limpa e performance, entrego soluções robustas
-            que unem design refinado a uma engenharia sólida. Atualmente exerço
-            a função de Tech Lead, orientando decisões técnicas e garantindo a
-            excelência em todas as fases do ciclo de desenvolvimento de
-            software.
-          </p>
+          <h2 id="about-title" class="eyebrow">
+            {{ t("app", "aboutEyebrow") }}
+          </h2>
+          <p>{{ t("app", "aboutText") }}</p>
         </article>
 
         <aside
           class="profile-summary surface-card"
-          aria-label="Formação e idiomas"
+          :aria-label="t('app', 'profileSummaryLabel')"
         >
           <div>
-            <h3>Formação</h3>
-            <strong>Sistemas de Informação</strong>
-            <span>Estácio da Amazônia (2020)</span>
+            <h3>{{ t("app", "educationTitle") }}</h3>
+            <strong>{{ t("app", "educationCourse") }}</strong>
+            <span>{{ t("app", "educationSchool") }}</span>
           </div>
           <div class="profile-summary__language">
-            <h3>Idiomas</h3>
-            <strong>Português (Nativo)</strong>
+            <h3>{{ t("app", "languagesTitle") }}</h3>
+            <strong>{{ t("app", "nativeLanguage") }}</strong>
           </div>
         </aside>
       </section>
 
       <section
         class="competencies section-shell"
-        aria-label="Competências técnicas"
+        :aria-label="t('app', 'competenciesLabel')"
       >
         <article
           v-for="item in competencies"
@@ -188,7 +191,7 @@ const themeAssets = computed(() =>
       >
         <div class="section-shell experience__inner">
           <div class="section-heading">
-            <h2 id="experience-title">Experiência Profissional</h2>
+            <h2 id="experience-title">{{ t("app", "experienceTitle") }}</h2>
             <span />
           </div>
 
@@ -231,21 +234,18 @@ const themeAssets = computed(() =>
         class="products section-shell"
         aria-labelledby="products-title"
       >
-        <h2 id="products-title">Produtos</h2>
+        <h2 id="products-title">{{ t("app", "productsTitle") }}</h2>
 
         <div class="products__grid">
           <article class="product-card product-card--web">
             <div class="product-card__heading">
-              <h3>Pigz Delivery (Web)</h3>
-              <a href="#" aria-label="Abrir Pigz Delivery em uma nova aba">
+              <h3>{{ t("app", "productWebTitle") }}</h3>
+              <a href="#" :aria-label="t('app', 'productWebLinkLabel')">
                 <img :src="themeAssets.externalLink" alt="" />
               </a>
             </div>
-            <p>
-              Desenvolvimento de novas funcionalidades, manutenção evolutiva e
-              integrações complexas.
-            </p>
-            <ul class="tag-list" aria-label="Tecnologias do Pigz Delivery">
+            <p>{{ t("app", "productWebDescription") }}</p>
+            <ul class="tag-list" :aria-label="t('app', 'productWebTagsLabel')">
               <li>React</li>
               <li>Next.js</li>
               <li>TypeScript</li>
@@ -254,18 +254,21 @@ const themeAssets = computed(() =>
 
           <article class="product-card product-card--app">
             <div>
-              <h3>Pigz (Android | iOS)</h3>
-              <p>
-                Desenvolvimento, manutenção, correções de bugs e gestão de
-                publicação em ambas as stores.
-              </p>
-              <ul class="tag-list" aria-label="Tecnologias do aplicativo Pigz">
+              <h3>{{ t("app", "productAppTitle") }}</h3>
+              <p>{{ t("app", "productAppDescription") }}</p>
+              <ul
+                class="tag-list"
+                :aria-label="t('app', 'productAppTagsLabel')"
+              >
                 <li>Kotlin</li>
                 <li>Swift</li>
                 <li>React Native</li>
               </ul>
             </div>
-            <div class="store-platforms" aria-label="Plataformas disponíveis">
+            <div
+              class="store-platforms"
+              :aria-label="t('app', 'availablePlatformsLabel')"
+            >
               <img :src="themeAssets.android" alt="Android" />
               <img :src="themeAssets.ios" alt="iOS" />
             </div>
@@ -276,12 +279,8 @@ const themeAssets = computed(() =>
               <img :src="themeAssets.confidential" alt="" />
             </div>
             <div>
-              <h3>Sistemas Corporativos Internos</h3>
-              <p>
-                Por questões de confidencialidade contratual, detalhes sobre
-                sistemas de gestão e dispositivos POS não podem ser divulgados
-                publicamente.
-              </p>
+              <h3>{{ t("app", "confidentialTitle") }}</h3>
+              <p>{{ t("app", "confidentialDescription") }}</p>
             </div>
           </article>
         </div>
@@ -292,11 +291,8 @@ const themeAssets = computed(() =>
         class="contact section-shell"
         aria-labelledby="contact-title"
       >
-        <h2 id="contact-title">Conecte-se Comigo</h2>
-        <p>
-          Disponível para projetos desafiadores e parcerias técnicas. Vamos
-          transformar ideias em software de alta performance.
-        </p>
+        <h2 id="contact-title">{{ t("app", "contactTitle") }}</h2>
+        <p>{{ t("app", "contactDescription") }}</p>
         <div class="contact__actions">
           <a
             class="button button--primary"
@@ -320,7 +316,7 @@ const themeAssets = computed(() =>
           <span>Boa Vista – RR</span>
         </div>
         <p>© 2026 João Lúcio Almeida da Silva.</p>
-        <nav aria-label="Redes sociais">
+        <nav :aria-label="t('app', 'socialLabel')">
           <a href="#">GitHub</a>
           <a href="#">LinkedIn</a>
         </nav>
