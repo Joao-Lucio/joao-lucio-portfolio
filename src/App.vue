@@ -6,7 +6,7 @@ import darkScrollArrow from "@/assets/dark/scroll-arrow.svg";
 import darkBullet from "@/assets/dark/bullet.svg";
 import darkExternalLink from "@/assets/dark/external-link.svg";
 import darkAndroid from "@/assets/dark/android.svg";
-import darkIos from "@/assets/dark/ios.svg";
+import darkApple from "@/assets/dark/apple.svg";
 import darkConfidential from "@/assets/dark/confidential.svg";
 import darkEmail from "@/assets/dark/email.svg";
 import darkPhone from "@/assets/dark/phone.svg";
@@ -14,7 +14,7 @@ import lightScrollArrow from "@/assets/light/scroll-arrow.svg";
 import lightBullet from "@/assets/light/bullet.svg";
 import lightExternalLink from "@/assets/light/external-link.svg";
 import lightAndroid from "@/assets/light/android.svg";
-import lightIos from "@/assets/light/ios.svg";
+import lightApple from "@/assets/light/apple.svg";
 import lightConfidential from "@/assets/light/confidential.svg";
 import lightEmail from "@/assets/light/email.svg";
 import lightPhone from "@/assets/light/phone.svg";
@@ -92,7 +92,7 @@ const themeAssets = computed(() =>
         bullet: darkBullet,
         externalLink: darkExternalLink,
         android: darkAndroid,
-        ios: darkIos,
+        ios: darkApple,
         confidential: darkConfidential,
         email: darkEmail,
         phone: darkPhone,
@@ -102,7 +102,7 @@ const themeAssets = computed(() =>
         bullet: lightBullet,
         externalLink: lightExternalLink,
         android: lightAndroid,
-        ios: lightIos,
+        ios: lightApple,
         confidential: lightConfidential,
         email: lightEmail,
         phone: lightPhone,
@@ -266,17 +266,35 @@ const themeAssets = computed(() =>
                 class="tag-list"
                 :aria-label="t('app', 'productAppTagsLabel')"
               >
+                <li>React Native</li>
                 <li>Kotlin</li>
                 <li>Swift</li>
-                <li>React Native</li>
               </ul>
             </div>
             <div
               class="store-platforms"
               :aria-label="t('app', 'availablePlatformsLabel')"
             >
-              <img :src="themeAssets.android" alt="Android" />
-              <img :src="themeAssets.ios" alt="iOS" />
+              <a
+                class="store-platform"
+                href="https://play.google.com/store/apps/details?id=app.pigz.mart"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir Pigz na Google Play"
+              >
+                <img :src="themeAssets.android" alt="Google Play" />
+                <span>Google Play</span>
+              </a>
+              <a
+                class="store-platform"
+                href="https://apps.apple.com/br/app/pigz/id1526557835"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir Pigz na App Store"
+              >
+                <img :src="themeAssets.ios" alt="App Store" />
+                <span>App Store</span>
+              </a>
             </div>
           </article>
 
@@ -747,14 +765,43 @@ const themeAssets = computed(() =>
   margin-top: 24px;
 }
 
-.store-platforms img:first-child {
-  width: 22px;
+.store-platform {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--outline-variant);
+  border-radius: 999px;
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  font: 500 12px/14px var(--font-sans);
+  text-decoration: none;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.store-platform:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.store-platform img {
+  display: block;
+  width: auto;
+  flex: none;
+  object-fit: contain;
+}
+
+.store-platform:first-child img {
   height: 14px;
 }
 
-.store-platforms img:last-child {
-  width: 15px;
-  height: 22px;
+.store-platform:last-child img {
+  height: 18px;
 }
 
 .product-card--confidential {
@@ -790,7 +837,8 @@ const themeAssets = computed(() =>
 }
 
 .confidential-icon img {
-  width: 20px;
+  display: block;
+  width: auto;
   height: 27px;
   object-fit: contain;
 }
