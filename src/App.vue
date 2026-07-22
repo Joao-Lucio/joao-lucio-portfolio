@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AppHeader } from "@/components/header";
+import AppHeader from "@components/AppHeader/index.vue";
 import { useTheme } from "@/composables";
 
 useTheme();

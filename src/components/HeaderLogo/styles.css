@@ -1,10 +1,3 @@
-<template>
-  <a href="#" class="header-logo" aria-label="João Lúcio — Home">
-    <span class="header-logo__text">João Lúcio</span>
-  </a>
-</template>
-
-<style scoped>
 .header-logo {
   display: flex;
   align-items: center;
@@ -24,4 +17,3 @@
 .header-logo:hover .header-logo__text {
   color: var(--primary);
 }
-</style>
