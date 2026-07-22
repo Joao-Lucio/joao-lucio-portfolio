@@ -60,7 +60,7 @@
   --header-logo-color: #1b1c1c;
 
   /* Page-specific surfaces */
-  --hero-glow-strength: 40%;
+  --hero-glow-strength: 15%;
   --hero-tag-bg: #ffffff;
   --card-bg: #ffffff;
   --card-elevated-bg: #f5f3f3;
