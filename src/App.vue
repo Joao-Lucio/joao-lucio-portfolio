@@ -474,6 +474,26 @@ const themeAssets = computed(() =>
   width: 12px;
   height: 20px;
   object-fit: contain;
+  animation: hero-scroll-float 2.4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes hero-scroll-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll img {
+    animation: none;
+  }
 }
 
 .surface-card,
