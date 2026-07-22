@@ -4,7 +4,7 @@ export const translations: Translations = {
   en: {
     nav: {
       experience: "Experience",
-      products: "Products",
+      projects: "Projects",
       about: "About",
       contact: "Contact",
       resume: "Resume",
@@ -67,7 +67,7 @@ export const translations: Translations = {
       role4Company: "Orange Labs Tecnologia",
       role4Summary:
         "Customer service, operational support, and structured feedback collection.",
-      productsTitle: "Products",
+      projectsTitle: "Projects",
       productWebTitle: "Pigz Delivery (Web)",
       productWebLinkLabel: "Open Pigz Delivery in a new tab",
       productWebDescription:
@@ -90,7 +90,7 @@ export const translations: Translations = {
   pt: {
     nav: {
       experience: "Experiência",
-      products: "Produtos",
+      projects: "Projetos",
       about: "Sobre",
       contact: "Contato",
       resume: "Currículo",
@@ -154,7 +154,7 @@ export const translations: Translations = {
       role4Company: "Orange Labs Tecnologia",
       role4Summary:
         "Atendimento ao cliente, suporte operacional e coleta de feedbacks estruturados.",
-      productsTitle: "Produtos",
+      projectsTitle: "Projetos",
       productWebTitle: "Pigz Delivery (Web)",
       productWebLinkLabel: "Abrir Pigz Delivery em uma nova aba",
       productWebDescription:

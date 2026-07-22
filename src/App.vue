@@ -230,13 +230,13 @@ const themeAssets = computed(() =>
       </section>
 
       <section
-        id="products"
-        class="products section-shell"
-        aria-labelledby="products-title"
+        id="projects"
+        class="projects section-shell"
+        aria-labelledby="projects-title"
       >
-        <h2 id="products-title">{{ t("app", "productsTitle") }}</h2>
+        <h2 id="projects-title">{{ t("app", "projectsTitle") }}</h2>
 
-        <div class="products__grid">
+        <div class="projects__grid">
           <article class="product-card product-card--web">
             <div class="product-card__heading">
               <h3>{{ t("app", "productWebTitle") }}</h3>
@@ -596,7 +596,7 @@ const themeAssets = computed(() =>
 }
 
 .section-heading h2,
-.products > h2,
+.projects > h2,
 .contact h2 {
   font-size: 32px;
   line-height: 40px;
@@ -681,15 +681,15 @@ const themeAssets = computed(() =>
   flex: none;
 }
 
-.products {
+.projects {
   padding-block: 96px;
 }
 
-.products > h2 {
+.projects > h2 {
   margin-bottom: 48px;
 }
 
-.products__grid {
+.projects__grid {
   display: grid;
   grid-template-columns: 7fr 5fr;
   gap: 24px;
@@ -970,7 +970,7 @@ const themeAssets = computed(() =>
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .products__grid {
+  .projects__grid {
     grid-template-columns: 1fr;
   }
 
@@ -1021,7 +1021,7 @@ const themeAssets = computed(() =>
   .about,
   .competencies,
   .experience__inner,
-  .products {
+  .projects {
     padding-top: 72px;
   }
 
