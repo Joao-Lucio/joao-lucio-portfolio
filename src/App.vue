@@ -331,7 +331,9 @@ const themeAssets = computed(() =>
           </a>
           <a
             class="button button--secondary"
-            :href="`tel:${profileContact.phone}`"
+            :href="`https://wa.me/${profileContact.phone.replace(/\D/g, '')}`"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img :src="themeAssets.phone" alt="" />
             {{ formattedPhone }}
