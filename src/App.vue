@@ -317,8 +317,20 @@ const themeAssets = computed(() =>
         </div>
         <p>© 2026 João Lúcio Almeida da Silva.</p>
         <nav :aria-label="t('app', 'socialLabel')">
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
+          <a
+            href="https://github.com/Joao-Lucio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/joaolucioalmeida/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </nav>
       </div>
     </footer>
