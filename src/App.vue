@@ -240,7 +240,13 @@ const themeAssets = computed(() =>
           <article class="product-card product-card--web">
             <div class="product-card__heading">
               <h3>{{ t("app", "productWebTitle") }}</h3>
-              <a href="#" :aria-label="t('app', 'productWebLinkLabel')">
+
+              <a
+                href="https://pigz.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                :aria-label="t('app', 'productWebLinkLabel')"
+              >
                 <img :src="themeAssets.externalLink" alt="" />
               </a>
             </div>
