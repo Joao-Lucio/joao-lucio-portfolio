@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import AppHeader from "@components/AppHeader/index.vue";
 import { useLocale, useTheme } from "@/composables";
+import { profileContact, profileLinks } from "@/constants";
 import darkScrollArrow from "@/assets/dark/scroll-arrow.svg";
 import darkBullet from "@/assets/dark/bullet.svg";
 import darkExternalLink from "@/assets/dark/external-link.svg";
@@ -18,9 +19,12 @@ import lightApple from "@/assets/light/apple.svg";
 import lightConfidential from "@/assets/light/confidential.svg";
 import lightEmail from "@/assets/light/email.svg";
 import lightPhone from "@/assets/light/phone.svg";
+import { formatPhone } from "@/utils/formatPhone";
 
 const { isDark } = useTheme();
 const { t } = useLocale();
+
+const formattedPhone = formatPhone(profileContact.phone);
 
 const heroTechnologies = [
   "React",
@@ -242,7 +246,7 @@ const themeAssets = computed(() =>
               <h3>{{ t("app", "productWebTitle") }}</h3>
 
               <a
-                href="https://pigz.com.br"
+                :href="profileLinks.pigzWebsite"
                 target="_blank"
                 rel="noopener noreferrer"
                 :aria-label="t('app', 'productWebLinkLabel')"
@@ -277,7 +281,7 @@ const themeAssets = computed(() =>
             >
               <a
                 class="store-platform"
-                href="https://play.google.com/store/apps/details?id=app.pigz.mart"
+                :href="profileLinks.pigzPlayStore"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir Pigz na Google Play"
@@ -287,7 +291,7 @@ const themeAssets = computed(() =>
               </a>
               <a
                 class="store-platform"
-                href="https://apps.apple.com/br/app/pigz/id1526557835"
+                :href="profileLinks.pigzAppStore"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir Pigz na App Store"
@@ -320,14 +324,17 @@ const themeAssets = computed(() =>
         <div class="contact__actions">
           <a
             class="button button--primary"
-            href="mailto:joao.silvarrr@gmail.com.br"
+            :href="`mailto:${profileContact.email}`"
           >
             <img :src="themeAssets.email" alt="" />
-            joao.silvarrr@gmail.com.br
+            {{ profileContact.email }}
           </a>
-          <a class="button button--secondary" href="tel:+5595991613194">
+          <a
+            class="button button--secondary"
+            :href="`tel:${profileContact.phone}`"
+          >
             <img :src="themeAssets.phone" alt="" />
-            (95) 99161-3194
+            {{ formattedPhone }}
           </a>
         </div>
       </section>
@@ -337,19 +344,19 @@ const themeAssets = computed(() =>
       <div class="footer__inner section-shell">
         <div class="footer__identity">
           <strong>João Lúcio</strong>
-          <span>Boa Vista – RR</span>
+          <span>{{ profileContact.city }}</span>
         </div>
         <p>© 2026 João Lúcio Almeida da Silva.</p>
         <nav :aria-label="t('app', 'socialLabel')">
           <a
-            href="https://github.com/Joao-Lucio"
+            :href="profileLinks.github"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/joaolucioalmeida/"
+            :href="profileLinks.linkedin"
             target="_blank"
             rel="noopener noreferrer"
           >

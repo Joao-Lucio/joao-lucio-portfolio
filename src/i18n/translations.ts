@@ -1,4 +1,5 @@
 import type { Translations } from "../types";
+import { profileContact } from "@/constants";
 
 export const translations: Translations = {
   en: {
@@ -19,7 +20,7 @@ export const translations: Translations = {
       closeMenu: "Close menu",
     },
     app: {
-      availability: "Boa Vista - RR",
+      availability: profileContact.city,
       heroRole: "Front-end & Mobile Engineer",
       heroTechnologiesLabel: "Main technologies",
       heroScrollLabel: "Go to about section",
@@ -105,7 +106,7 @@ export const translations: Translations = {
       closeMenu: "Fechar menu",
     },
     app: {
-      availability: "Boa Vista - RR",
+      availability: profileContact.city,
       heroRole: "Front-end & Mobile Engineer",
       heroTechnologiesLabel: "Principais tecnologias",
       heroScrollLabel: "Ir para a seção sobre mim",
