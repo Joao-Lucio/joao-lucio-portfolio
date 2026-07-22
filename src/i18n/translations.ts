@@ -4,8 +4,8 @@ export const translations: Translations = {
   en: {
     nav: {
       experience: 'Experience',
-      projects: 'Projects',
-      about: 'About Me',
+      products: 'Products',
+      about: 'About',
       contact: 'Contact',
       resume: 'Resume',
     },
@@ -22,8 +22,8 @@ export const translations: Translations = {
   pt: {
     nav: {
       experience: 'Experiência',
-      projects: 'Projetos',
-      about: 'Sobre Mim',
+      products: 'Produtos',
+      about: 'Sobre',
       contact: 'Contato',
       resume: 'Currículo',
     },

@@ -1,4 +1,4 @@
-const logoText = "João Lúcio";
+const logoText = "JOÃO LÚCIO";
 const ariaLabel = `${logoText} — Home`;
 
 export function useHeaderLogo() {

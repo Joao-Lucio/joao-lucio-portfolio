@@ -1,7 +1,7 @@
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import { useLocale, useScrollSpy } from "@/composables";
 
-const sectionIds = ["experience", "projects", "about", "contact"];
+const sectionIds = ["experience", "products", "about", "contact"];
 
 export function useAppHeader() {
   const { t } = useLocale();

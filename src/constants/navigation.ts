@@ -4,8 +4,8 @@ export interface HeaderNavigationItem {
 }
 
 export const headerNavigationItems: HeaderNavigationItem[] = [
-  { key: "experience", href: "#experience" },
-  { key: "projects", href: "#projects" },
   { key: "about", href: "#about" },
+  { key: "experience", href: "#experience" },
+  { key: "products", href: "#products" },
   { key: "contact", href: "#contact" },
 ];

@@ -55,7 +55,27 @@
 
   /* Header */
   --header-bg: rgba(251, 249, 249, 0.8);
-  --header-border: #e5e5e5;
+  --header-border: #bbc9cf;
+  --header-blur: 6px;
+  --header-logo-color: #1b1c1c;
+
+  /* Page-specific surfaces */
+  --hero-glow-strength: 40%;
+  --hero-tag-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-elevated-bg: #f5f3f3;
+  --competency-bg: #ffffff;
+  --footer-bg: #f5f3f3;
+  --tag-bg: #efeded;
+  --tag-border: #bbc9cf;
+  --confidential-icon-bg: #f5f3f3;
+  --secondary-button-bg: #ffffff;
+  --card-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  --profile-value-weight: 700;
+  --product-heading-weight: 700;
+  --primary-button-weight: 700;
+  --footer-copy-opacity: 1;
+  --footer-link-color: #3c494e;
 
   /* Typography */
   --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
@@ -125,15 +145,34 @@
   --background: #0b1326;
   --on-background: #dae2fd;
 
-  --elevation-0: #020617;
-  --elevation-1-bg: #0f172a;
-  --elevation-1-border: #1e293b;
-  --elevation-2-bg: #1e293b;
-  --elevation-2-border: #334155;
+  --elevation-0: #060e20;
+  --elevation-1-bg: #131b2e;
+  --elevation-1-border: #3c494e;
+  --elevation-2-bg: #171f33;
+  --elevation-2-border: #3c494e;
   --elevation-2-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
-  --header-bg: rgba(11, 19, 38, 0.8);
-  --header-border: #1e293b;
+  --header-bg: #0b1326;
+  --header-border: #3c494e;
+  --header-blur: 0px;
+  --header-logo-color: #a4e6ff;
+
+  --hero-glow-strength: 10%;
+  --hero-tag-bg: #171f33;
+  --card-bg: #131b2e;
+  --card-elevated-bg: #171f33;
+  --competency-bg: #060e20;
+  --footer-bg: #060e20;
+  --tag-bg: #2d3449;
+  --tag-border: #3c494e;
+  --confidential-icon-bg: #222a3d;
+  --secondary-button-bg: transparent;
+  --card-shadow: none;
+  --profile-value-weight: 400;
+  --product-heading-weight: 600;
+  --primary-button-weight: 500;
+  --footer-copy-opacity: 0.7;
+  --footer-link-color: #c0c1ff;
 }
 
 /* ---------- Global Reset ---------- */
@@ -161,6 +200,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: var(--transition-colors);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 /* ---------- Typography ---------- */

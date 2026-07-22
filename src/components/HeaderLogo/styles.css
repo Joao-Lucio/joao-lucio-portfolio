@@ -7,13 +7,15 @@
 
 .header-logo__text {
   font-family: var(--font-sans);
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  color: var(--on-surface);
-  letter-spacing: -0.02em;
+  color: var(--header-logo-color);
+  text-transform: uppercase;
+  letter-spacing: -0.7px;
+  line-height: 16px;
   transition: color 0.3s ease;
 }
 
 .header-logo:hover .header-logo__text {
-  color: var(--primary);
+  color: var(--primary-container);
 }
