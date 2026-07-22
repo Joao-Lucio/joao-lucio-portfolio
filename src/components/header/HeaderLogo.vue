@@ -1,0 +1,27 @@
+<template>
+  <a href="#" class="header-logo" aria-label="João Lúcio — Home">
+    <span class="header-logo__text">João Lúcio</span>
+  </a>
+</template>
+
+<style scoped>
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.header-logo__text {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.header-logo:hover .header-logo__text {
+  color: var(--primary);
+}
+</style>
