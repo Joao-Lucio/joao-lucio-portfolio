@@ -60,8 +60,13 @@ const roles = computed(() => [
     title: t("app", "role1Title"),
     company: t("app", "role1Company"),
     current: true,
-    summary: t("app", "role1Summary"),
-    highlights: [t("app", "role1Highlight1"), t("app", "role1Highlight2")],
+    summary: "",
+    highlights: [
+      t("app", "role1Highlight1"),
+      t("app", "role1Highlight2"),
+      t("app", "role1Highlight3"),
+      t("app", "role1Highlight4"),
+    ],
   },
   {
     period: t("app", "role2Period"),
@@ -69,23 +74,39 @@ const roles = computed(() => [
     company: t("app", "role2Company"),
     current: false,
     summary: "",
-    highlights: [t("app", "role2Highlight1"), t("app", "role2Highlight2")],
+    highlights: [
+      t("app", "role2Highlight1"),
+      t("app", "role2Highlight2"),
+      t("app", "role2Highlight3"),
+      t("app", "role2Highlight4"),
+      t("app", "role2Highlight5"),
+      t("app", "role2Highlight6"),
+    ],
   },
   {
     period: t("app", "role3Period"),
     title: t("app", "role3Title"),
     company: t("app", "role3Company"),
     current: false,
-    summary: t("app", "role3Summary"),
-    highlights: [],
+    summary: "",
+    highlights: [
+      t("app", "role3Highlight1"),
+      t("app", "role3Highlight2"),
+      t("app", "role3Highlight3"),
+      t("app", "role3Highlight4"),
+    ],
   },
   {
     period: t("app", "role4Period"),
     title: t("app", "role4Title"),
     company: t("app", "role4Company"),
     current: false,
-    summary: t("app", "role4Summary"),
-    highlights: [],
+    summary: "",
+    highlights: [
+      t("app", "role4Highlight1"),
+      t("app", "role4Highlight2"),
+      t("app", "role4Highlight3"),
+    ],
   },
 ]);
 
@@ -540,6 +561,7 @@ const themeAssets = computed(() =>
 .about__copy p {
   color: var(--on-surface-variant);
   line-height: 26px;
+  white-space: pre-line;
 }
 
 .profile-summary {
@@ -685,6 +707,7 @@ const themeAssets = computed(() =>
 .role__description {
   font-size: 14px;
   line-height: 20px;
+  white-space: pre-line;
 }
 
 .role__highlights {
@@ -763,6 +786,7 @@ const themeAssets = computed(() =>
 .product-card p {
   color: var(--on-surface-variant);
   line-height: 24px;
+  white-space: pre-line;
 }
 
 .tag-list {
@@ -882,6 +906,7 @@ const themeAssets = computed(() =>
   margin: 16px auto 0;
   color: var(--on-surface-variant);
   line-height: 24px;
+  white-space: pre-line;
 }
 
 .contact__actions {

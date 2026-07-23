@@ -26,7 +26,7 @@ export const translations: Translations = {
       heroScrollLabel: "Go to about section",
       aboutEyebrow: "About me",
       aboutText:
-        "Front-end and Mobile Developer with extensive experience building and maintaining high-scale web and mobile applications using React, React Native, TypeScript, and Next.js. Focused on clean architecture and performance, I deliver robust solutions that combine refined design with solid engineering. I currently work as a Tech Lead, guiding technical decisions and ensuring excellence across every phase of the software development lifecycle.",
+        "Front-end and Mobile Engineer with experience developing web and mobile applications using React, React Native, Next.js, TypeScript, Kotlin, and Swift.\nExperienced in building new features, maintaining existing systems, integrating REST APIs, publishing mobile applications, and continuously improving products.\nCurrently working as a Tech Lead, combining hands-on software development with technical guidance, code reviews, and delivery planning.",
       profileSummaryLabel: "Education and languages",
       educationTitle: "Education",
       educationCourse: "Information Systems",
@@ -46,37 +46,50 @@ export const translations: Translations = {
       role1Period: "2025 - Present",
       role1Title: "Tech Lead",
       role1Company: "Orange Labs Tecnologia",
-      role1Summary:
-        "Technical leadership focused on delivery and payment solutions.",
       role1Highlight1:
-        "Ongoing technical support for the development team and technical planning for new features.",
+        "Develop and evolve web and mobile applications for the delivery and payments industry.",
       role1Highlight2:
-        "Rigorous code review to ensure quality and scalability.",
+        "Provide technical support to the development team through code reviews and solution design.",
+      role1Highlight3:
+        "Collaborate with product and engineering teams on technical planning and feature delivery.",
+      role1Highlight4:
+        "Maintain, improve, and continuously evolve company products.",
       role2Period: "2023 - 2025",
       role2Title: "Front-end / Mobile Dev",
       role2Company: "Orange Labs Tecnologia",
       role2Highlight1:
-        "Development with React and React Native using reusable components.",
+        "Developed web and mobile applications using React and React Native.",
       role2Highlight2:
-        "API consumption, POS device integration, and App Store / Play Store publishing.",
+        "Built reusable components and scalable user interfaces.",
+      role2Highlight3: "Integrated REST APIs.",
+      role2Highlight4:
+        "Published mobile applications on Google Play and the Apple App Store.",
+      role2Highlight5: "Integrated applications with POS devices.",
+      role2Highlight6:
+        "Maintained existing products and implemented continuous improvements.",
       role3Period: "2023 - 2023",
       role3Title: "QA Analyst",
       role3Company: "Orange Labs Tecnologia",
-      role3Summary: "Functional testing, bug tracking, and release validation.",
+      role3Highlight1: "Performed functional testing.",
+      role3Highlight2: "Reported and tracked software defects.",
+      role3Highlight3: "Validated application releases.",
+      role3Highlight4: "Supported the software quality assurance process.",
       role4Period: "2022 - 2023",
       role4Title: "External Agent",
       role4Company: "Orange Labs Tecnologia",
-      role4Summary:
-        "Customer service, operational support, and structured feedback collection.",
+      role4Highlight1: "Provided customer support.",
+      role4Highlight2: "Delivered operational assistance.",
+      role4Highlight3:
+        "Collected customer feedback to support product improvements.",
       projectsTitle: "Projects",
       productWebTitle: "Pigz Delivery (Web)",
       productWebLinkLabel: "Open Pigz Delivery in a new tab",
       productWebDescription:
-        "Development of new features, evolutionary maintenance, and complex integrations.",
+        "Feature development, application maintenance, REST API integrations and continuous product improvements.",
       productWebTagsLabel: "Pigz Delivery technologies",
       productAppTitle: "Pigz (Android | iOS)",
       productAppDescription:
-        "Development, maintenance, bug fixes, and release management for both stores.",
+        "Mobile application development, application maintenance, store publishing, bug fixing and continuous product evolution.",
       productAppTagsLabel: "Pigz app technologies",
       availablePlatformsLabel: "Available platforms",
       confidentialTitle: "Internal Corporate Systems",
@@ -112,7 +125,7 @@ export const translations: Translations = {
       heroScrollLabel: "Ir para a seção sobre mim",
       aboutEyebrow: "Sobre mim",
       aboutText:
-        "Desenvolvedor Front-end e Mobile com vasta experiência no desenvolvimento e manutenção de aplicações web e mobile de alta escala utilizando React, React Native, TypeScript e Next.js. Com foco em arquitetura limpa e performance, entrego soluções robustas que unem design refinado a uma engenharia sólida. Atualmente exerço a função de Tech Lead, orientando decisões técnicas e garantindo a excelência em todas as fases do ciclo de desenvolvimento de software.",
+        "Desenvolvedor Front-end e Mobile com experiência no desenvolvimento de aplicações web e mobile utilizando React, React Native, Next.js, TypeScript, Kotlin e Swift.\nAtuo na criação de novas funcionalidades, manutenção de sistemas, integração com APIs, publicação de aplicativos e evolução contínua de produtos.\nAtualmente exerço a função de Tech Lead, conciliando desenvolvimento com apoio técnico ao time, revisão de código e acompanhamento das entregas.",
       profileSummaryLabel: "Formação e idiomas",
       educationTitle: "Formação",
       educationCourse: "Sistemas de Informação",
@@ -132,38 +145,45 @@ export const translations: Translations = {
       role1Period: "2025 - Atual",
       role1Title: "Tech Lead",
       role1Company: "Orange Labs Tecnologia",
-      role1Summary:
-        "Liderança técnica focada em soluções de delivery e pagamentos.",
       role1Highlight1:
-        "Apoio técnico contínuo ao time de desenvolvimento e planejamento técnico de features.",
+        "Desenvolvimento e evolução de aplicações web e mobile voltadas ao segmento de delivery e pagamentos.",
       role1Highlight2:
-        "Revisão rigorosa de código (Code Review) para assegurar qualidade e escalabilidade.",
+        "Apoio técnico ao time, revisando código e auxiliando na definição de soluções.",
+      role1Highlight3:
+        "Planejamento técnico das entregas em conjunto com produto e desenvolvimento.",
+      role1Highlight4:
+        "Correção de bugs, manutenção e evolução contínua dos produtos.",
       role2Period: "2023 - 2025",
       role2Title: "Front-end / Mobile Dev",
       role2Company: "Orange Labs Tecnologia",
-      role2Highlight1:
-        "Desenvolvimento com React e React Native utilizando componentes reutilizáveis.",
-      role2Highlight2:
-        "Consumo de APIs, integração com dispositivos POS e publicação em App Store/Play Store.",
+      role2Highlight1: "Desenvolvimento de aplicações React e React Native.",
+      role2Highlight2: "Criação de componentes reutilizáveis.",
+      role2Highlight3: "Integração com APIs REST.",
+      role2Highlight4: "Publicação de aplicativos na Play Store e App Store.",
+      role2Highlight5: "Integração com dispositivos POS.",
+      role2Highlight6: "Correção de bugs e manutenção contínua dos produtos.",
       role3Period: "2023 - 2023",
       role3Title: "QA Analyst",
       role3Company: "Orange Labs Tecnologia",
-      role3Summary:
-        "Testes funcionais, rastreamento de bugs e validação de releases.",
+      role3Highlight1: "Testes funcionais.",
+      role3Highlight2: "Registro e acompanhamento de bugs.",
+      role3Highlight3: "Validação de releases.",
+      role3Highlight4: "Apoio à qualidade do produto.",
       role4Period: "2022 - 2023",
       role4Title: "Agente Externo",
       role4Company: "Orange Labs Tecnologia",
-      role4Summary:
-        "Atendimento ao cliente, suporte operacional e coleta de feedbacks estruturados.",
+      role4Highlight1: "Atendimento a clientes.",
+      role4Highlight2: "Suporte operacional.",
+      role4Highlight3: "Coleta de feedbacks para evolução do produto.",
       projectsTitle: "Projetos",
       productWebTitle: "Pigz Delivery (Web)",
       productWebLinkLabel: "Abrir Pigz Delivery em uma nova aba",
       productWebDescription:
-        "Desenvolvimento de novas funcionalidades, manutenção evolutiva e integrações complexas.",
+        "Desenvolvimento de funcionalidades, manutenção, integrações com APIs e melhorias contínuas.",
       productWebTagsLabel: "Tecnologias do Pigz Delivery",
       productAppTitle: "Pigz (Android | iOS)",
       productAppDescription:
-        "Desenvolvimento, manutenção, correções de bugs e gestão de publicação em ambas as stores.",
+        "Desenvolvimento, manutenção, publicação nas lojas, correção de bugs e evolução do aplicativo.",
       productAppTagsLabel: "Tecnologias do aplicativo Pigz",
       availablePlatformsLabel: "Plataformas disponíveis",
       confidentialTitle: "Sistemas Corporativos Internos",
