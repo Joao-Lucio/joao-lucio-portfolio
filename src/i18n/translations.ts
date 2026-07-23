@@ -94,7 +94,7 @@ export const translations: Translations = {
       availablePlatformsLabel: "Available platforms",
       confidentialTitle: "Internal Corporate Systems",
       confidentialDescription:
-        "Due to contractual confidentiality, details about management systems and POS devices cannot be publicly disclosed.",
+        "Other products and internal systems cannot be disclosed due to confidentiality agreements.",
       contactTitle: "Get in touch",
       contactDescription:
         "Shall we talk? If you’d like to exchange ideas about technology, development, or a project, please get in touch.",
@@ -188,7 +188,7 @@ export const translations: Translations = {
       availablePlatformsLabel: "Plataformas disponíveis",
       confidentialTitle: "Sistemas Corporativos Internos",
       confidentialDescription:
-        "Por questões de confidencialidade contratual, detalhes sobre sistemas de gestão e dispositivos POS não podem ser divulgados publicamente.",
+        "Outros produtos e sistemas internos não são apresentados devido a acordos de confidencialidade.",
       contactTitle: "Entre em contato",
       contactDescription:
         "Vamos conversar? Se quiser trocar ideias sobre tecnologia, desenvolvimento ou algum projeto, entre em contato.",
