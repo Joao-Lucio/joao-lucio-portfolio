@@ -278,6 +278,78 @@ a:hover {
   font-family: var(--font-mono);
 }
 
+.section-shell {
+  width: min(1104px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+@media (max-width: 700px) {
+  .section-shell {
+    width: min(100% - 32px, 1104px);
+  }
+}
+
+.surface-card,
+.competency-card,
+.product-card {
+  border: 1px solid var(--outline-variant);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font: 500 14px/16px var(--font-sans);
+  letter-spacing: 0.28px;
+}
+
+.button img {
+  width: 20px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.button--primary {
+  background: var(--primary-container);
+  box-shadow:
+    0 4px 6px -1px rgb(0 209 255 / 20%),
+    0 2px 4px -2px rgb(0 209 255 / 20%);
+  color: var(--on-primary-container);
+  font-weight: var(--primary-button-weight);
+}
+
+.button--primary:hover {
+  color: var(--on-primary-container);
+  filter: brightness(1.05);
+}
+
+.button--secondary {
+  border-color: var(--outline-variant);
+  background: var(--secondary-button-bg);
+  box-shadow: var(--card-shadow);
+  color: var(--on-surface);
+}
+
+.button--secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (max-width: 700px) {
+  .button {
+    width: 100%;
+    padding-inline: 16px;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* ---------- Scrollbar ---------- */
 ::-webkit-scrollbar {
   width: 8px;

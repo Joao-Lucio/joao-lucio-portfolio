@@ -1,0 +1,35 @@
+.contact {
+  padding-block: 128px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+}
+
+.contact p {
+  max-width: 576px;
+  margin: 16px auto 0;
+  color: var(--on-surface-variant);
+  line-height: 24px;
+  white-space: pre-line;
+}
+
+.contact__actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    padding-block: 96px;
+  }
+
+  .contact__actions {
+    flex-direction: column;
+  }
+}
