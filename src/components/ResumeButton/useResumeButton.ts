@@ -7,7 +7,7 @@ export function useResumeButton() {
   const ariaLabel = computed(() => t("ui", "downloadResume"));
   const label = computed(() => t("nav", "resume"));
   const resumeHref = computed(() =>
-    isEnglish.value ? "/file/curriculo-en.pdf" : "/file/curriculo-ptBr.pdf",
+    isEnglish.value ? "/file/resume-en.pdf" : "/file/resume-ptBr.pdf",
   );
   const resumeFileName = computed(() =>
     isEnglish.value

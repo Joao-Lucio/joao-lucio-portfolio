@@ -26,7 +26,9 @@ describe("header controls", () => {
     const wrapper = mount(HeaderNav, { props: { activeSection: "projects" } });
 
     expect(wrapper.findAll(".header-nav__link")).toHaveLength(4);
-    expect(wrapper.get('a[href="#projects"]').classes()).toContain("header-nav__link--active");
+    expect(wrapper.get('a[href="#projects"]').classes()).toContain(
+      "header-nav__link--active",
+    );
 
     await wrapper.get('a[href="#contact"]').trigger("click");
     expect(wrapper.emitted("navigate")).toEqual([["#contact"]]);
@@ -39,18 +41,22 @@ describe("header controls", () => {
     await wrapper.get("button").trigger("click");
 
     expect(wrapper.text()).toContain("PT");
-    expect(wrapper.get("button").attributes("aria-label")).toBe("Trocar idioma");
+    expect(wrapper.get("button").attributes("aria-label")).toBe(
+      "Trocar idioma",
+    );
   });
 
   it("uses the localized resume download details", async () => {
     const wrapper = mount(ResumeButton);
 
-    expect(wrapper.get("a").attributes("href")).toBe("/file/curriculo-en.pdf");
-    expect(wrapper.get("a").attributes("download")).toBe("resume-joao-lucio-en.pdf");
+    expect(wrapper.get("a").attributes("href")).toBe("/file/resume-en.pdf");
+    expect(wrapper.get("a").attributes("download")).toBe(
+      "resume-joao-lucio-en.pdf",
+    );
 
     useLocale().setLocale("pt");
     await nextTick();
-    expect(wrapper.get("a").attributes("href")).toBe("/file/curriculo-ptBr.pdf");
+    expect(wrapper.get("a").attributes("href")).toBe("/file/resume-ptBr.pdf");
   });
 
   it("toggles theme and exposes the animation state", async () => {
@@ -68,10 +74,14 @@ describe("header controls", () => {
   });
 
   it("shows and interacts with the mobile navigation", async () => {
-    const wrapper = mount(MobileMenu, { props: { isOpen: true, activeSection: "about" } });
+    const wrapper = mount(MobileMenu, {
+      props: { isOpen: true, activeSection: "about" },
+    });
 
     expect(wrapper.get('[role="dialog"]')).toBeTruthy();
-    expect(wrapper.get('a[href="#about"]').classes()).toContain("mobile-menu__link--active");
+    expect(wrapper.get('a[href="#about"]').classes()).toContain(
+      "mobile-menu__link--active",
+    );
 
     await wrapper.get('a[href="#experience"]').trigger("click");
     await wrapper.get(".mobile-menu__close").trigger("click");

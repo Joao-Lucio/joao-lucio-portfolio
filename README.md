@@ -84,8 +84,8 @@ public/
 
 Os arquivos ficam em `public/file/` e são disponibilizados pelo botão de currículo:
 
-- `curriculo-ptBr.pdf`
-- `curriculo-en.pdf`
+- `resume-ptBr.pdf`
+- `resume-en.pdf`
 
 Para atualizar os documentos, substitua os arquivos mantendo esses nomes ou ajuste o composable em `src/components/ResumeButton/useResumeButton.ts`.
 
