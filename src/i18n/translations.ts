@@ -95,9 +95,9 @@ export const translations: Translations = {
       confidentialTitle: "Internal Corporate Systems",
       confidentialDescription:
         "Due to contractual confidentiality, details about management systems and POS devices cannot be publicly disclosed.",
-      contactTitle: "Connect with me",
+      contactTitle: "Get in touch",
       contactDescription:
-        "Available for challenging projects and technical partnerships. Let’s turn ideas into high-performance software.",
+        "Shall we talk? If you’d like to exchange ideas about technology, development, or a project, please get in touch.",
       socialLabel: "Social networks",
     },
   },
@@ -189,9 +189,9 @@ export const translations: Translations = {
       confidentialTitle: "Sistemas Corporativos Internos",
       confidentialDescription:
         "Por questões de confidencialidade contratual, detalhes sobre sistemas de gestão e dispositivos POS não podem ser divulgados publicamente.",
-      contactTitle: "Conecte-se Comigo",
+      contactTitle: "Entre em contato",
       contactDescription:
-        "Disponível para projetos desafiadores e parcerias técnicas. Vamos transformar ideias em software de alta performance.",
+        "Vamos conversar? Se quiser trocar ideias sobre tecnologia, desenvolvimento ou algum projeto, entre em contato.",
       socialLabel: "Redes sociais",
     },
   },
