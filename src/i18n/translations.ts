@@ -81,7 +81,7 @@ export const translations: Translations = {
       role4Highlight2: "Delivered operational assistance.",
       role4Highlight3:
         "Collected customer feedback to support product improvements.",
-      projectsTitle: "Projects",
+      projectsTitle: "Professional Projects",
       productWebTitle: "Pigz Delivery (Web)",
       productWebLinkLabel: "Open Pigz Delivery in a new tab",
       productWebDescription:
@@ -175,7 +175,7 @@ export const translations: Translations = {
       role4Highlight1: "Atendimento a clientes.",
       role4Highlight2: "Suporte operacional.",
       role4Highlight3: "Coleta de feedbacks para evolução do produto.",
-      projectsTitle: "Projetos",
+      projectsTitle: "Projetos Profissionais",
       productWebTitle: "Pigz Delivery (Web)",
       productWebLinkLabel: "Abrir Pigz Delivery em uma nova aba",
       productWebDescription:
