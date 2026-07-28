@@ -31,7 +31,7 @@ describe("useScrollSpy", () => {
     expect(observer.observe).toHaveBeenCalledTimes(2);
 
     IntersectionObserverMock.callback(
-      [{ isIntersecting: true, target: document.getElementById("contact")! } as IntersectionObserverEntry],
+      [{ isIntersecting: true, target: document.getElementById("contact")! } as unknown as IntersectionObserverEntry],
       {} as IntersectionObserver,
     );
     await nextTick();
