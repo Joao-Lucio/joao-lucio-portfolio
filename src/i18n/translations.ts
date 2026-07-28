@@ -163,7 +163,7 @@ export const translations: Translations = {
       role2Highlight5: "Integração com dispositivos POS.",
       role2Highlight6: "Correção de bugs e manutenção contínua dos produtos.",
       role3Period: "2023 - 2023",
-      role3Title: "QA Analyst",
+      role3Title: "Analista de QA",
       role3Company: "Orange Labs Tecnologia",
       role3Highlight1: "Testes funcionais.",
       role3Highlight2: "Registro e acompanhamento de bugs.",
